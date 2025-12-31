@@ -232,13 +232,23 @@ footer{
 
 /* 📱 Mobile */
 @media(max-width:768px){
+
     .hero-text h1{
-        font-size:30px;
+        font-size:26px;
+        white-space:nowrap;   /* ✅ aik hi row me rahe */
     }
+
+    .hero-text p{
+        font-size:14px;
+        white-space:nowrap;   /* ✅ text tootay ga nahi */
+    }
+
     .hero-text{
-        padding:20px;
+        padding:16px 18px;
+        max-width:90%;
     }
 }
+
 
     /* ---------------- BUTTONS ---------------- */
     .prev, .next {
@@ -627,4 +637,5 @@ function toggleMenu(){
 
 </body>
 </html>
+
 
