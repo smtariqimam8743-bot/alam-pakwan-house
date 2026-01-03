@@ -292,21 +292,31 @@
             }
 
             .nav-links {
-                position: absolute;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                background: #000;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #000;
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    transition: transform 0.3s ease;
+    z-index: 999;
+    max-height: 0;
+    overflow: hidden;
+}
 
-                /* inline style ko override karne ke liye */
-                display: none !important;
-                flex-direction: column;
-                gap: 0;
-            }
+/* Active Menu */
+.nav-links.active {
+    display: flex;
+    max-height: 500px; /* enough height */
+}
 
-            .nav-links.active {
-                display: flex !important;
-            }
+/* Optional: smooth swipe effect */
+.nav-links.swipe-up {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
 
 
         }
@@ -1226,27 +1236,7 @@
     <button class="next" onclick="changeSlide(1)">&#10095;</button>
     </div>
 
-    <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-
-        function showSlide(index) {
-            slides.forEach(slide => slide.classList.remove('active'));
-            slides[index].classList.add('active');
-        }
-
-        function changeSlide(n) {
-            currentSlide += n;
-            if (currentSlide >= slides.length) currentSlide = 0;
-            if (currentSlide < 0) currentSlide = slides.length - 1;
-            showSlide(currentSlide);
-        }
-
-        // Optional: auto-slide every 5 seconds
-        setInterval(() => {
-            changeSlide(1);
-        }, 5000);
-    </script>
+   
     <!-- ---------------- MENU HEADER ---------------- -->
     <div class="menu-section-container">
         <div class="menu-header">
@@ -1448,6 +1438,62 @@
             window.open(url, "_blank");
         }
     </script>
+     <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+        }
+
+        function changeSlide(n) {
+            currentSlide += n;
+            if (currentSlide >= slides.length) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = slides.length - 1;
+            showSlide(currentSlide);
+        }
+
+        // Optional: auto-slide every 5 seconds
+        setInterval(() => {
+            changeSlide(1);
+        }, 5000);
+    </script>
+    <script>
+    const navLinks = document.querySelector('.nav-links');
+const hamburger = document.querySelector('.hamburger');
+
+function toggleMenu() {
+    navLinks.classList.toggle('active');
+}
+
+// Touch variables
+let startY = 0;
+let endY = 0;
+
+navLinks.addEventListener('touchstart', (e) => {
+    startY = e.touches[0].clientY;
+});
+
+navLinks.addEventListener('touchmove', (e) => {
+    endY = e.touches[0].clientY;
+});
+
+navLinks.addEventListener('touchend', () => {
+    // Swipe up detection
+    if (startY - endY > 50) {
+        // User swiped up → close menu
+        navLinks.classList.remove('active');
+    }
+});
+
+// Optional: close menu on scroll (desktop)
+navLinks.addEventListener('wheel', (e) => {
+    if (e.deltaY > 0) { // scroll up
+        navLinks.classList.remove('active');
+    }
+});
+</script>
 </body>
 
 </html>
