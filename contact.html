@@ -326,13 +326,12 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
         }
-/* ===== CONTACT BUTTONS ===== */
 /* ===== CONTACT CARD ===== */
 .contact-card {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 30px 25px;
-    background: #111; /* dark card */
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 25px 20px;
+    background: #111;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.7);
     text-align: center;
@@ -354,13 +353,13 @@
 
 .contact-card .contact-header h2 {
     color: #fff;
-    font-size: 28px;
-    margin: 8px 0;
+    font-size: 26px;
+    margin: 10px 0;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .contact-card:hover .contact-header h2 {
-    color: #25D366; /* hover green */
+    color: #25D366;
     transform: scale(1.05);
 }
 
@@ -382,7 +381,7 @@
 .contact-buttons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     margin-top: 25px;
     flex-wrap: wrap;
     z-index: 10;
@@ -391,29 +390,20 @@
 .contact-buttons .btn {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     padding: 12px 25px;
     font-size: 16px;
     font-weight: 600;
-    border-radius: 10px;
+    border-radius: 12px;
     text-decoration: none;
     color: #fff;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    min-width: 140px;
 }
 
-/* WhatsApp Button (Orange) */
-.contact-buttons .call-btn {
-    background: #ff8c00;
-}
-
-.contact-buttons .call-btn:hover {
-    background: #ffa733;
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(255,140,0,0.6);
-}
-
-/* Call Button (Green) */
+/* WhatsApp Button (Green) */
 .contact-buttons .whatsapp-btn {
     background: #25D366;
 }
@@ -421,16 +411,58 @@
 .contact-buttons .whatsapp-btn:hover {
     background: #2ee071;
     transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(37,211,102,0.6);
+    box-shadow: 0 6px 18px rgba(37,211,102,0.5);
 }
 
-/* Mobile */
+/* Call Button (Orange) */
+.contact-buttons .call-btn {
+    background: #ff8c00;
+}
+
+.contact-buttons .call-btn:hover {
+    background: #ffa733;
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(255,140,0,0.5);
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
 @media(max-width: 480px) {
+    .contact-card {
+        padding: 12px 10px;
+        margin: 15px;
+    }
+
+    .contact-card .contact-header h2 {
+        font-size: 18px;
+        margin: 5px 0;
+    }
+
+    .contact-card .contact-line {
+        width: 40px;
+        height: 3px;
+    }
+
     .contact-buttons {
-        flex-direction: column;
-        gap: 15px;
+        flex-direction: row; /* horizontal */
+        justify-content: center; /* center align */
+        gap: 8px; /* gap between buttons */
+        flex-wrap: wrap; /* wrap if really small screen */
+    }
+
+    .contact-buttons .btn {
+        width: auto; /* auto width for horizontal layout */
+        padding: 6px 12px; /* smaller padding */
+        font-size: 13px;
+        text-align: center;
+        min-width: 0;
+    }
+
+    .contact-buttons .btn i {
+        font-size: 14px; /* icon size */
     }
 }
+
+
 
         /* INFO BOX */
         .contact-info {
@@ -1035,7 +1067,7 @@
      
 
    
- <div class="contact-card"> <!-- Card Container Start -->
+ <div class="contact-card">
 
     <!-- Heading -->
     <div class="contact-header">
@@ -1046,13 +1078,15 @@
 
     <!-- Buttons -->
     <div class="contact-buttons">
-        <a href="https://wa.me/92332202279" target="_blank" class="btn call-btn">
+        <a href="https://wa.me/92332202279" target="_blank" class="btn whatsapp-btn">
             <i class="fa-brands fa-whatsapp"></i> WhatsApp
         </a>
-        <a href="tel:03332202279" class="btn whatsapp-btn">
+        <a href="tel:03332202279" class="btn call-btn">
             <i class="fa fa-phone"></i> Call
         </a>
     </div>
+
+</div>
 
 </div> <!-- Card Container End -->
 
