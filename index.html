@@ -1459,41 +1459,6 @@
             changeSlide(1);
         }, 5000);
     </script>
-    <script>
-    const navLinks = document.querySelector('.nav-links');
-const hamburger = document.querySelector('.hamburger');
-
-function toggleMenu() {
-    navLinks.classList.toggle('active');
-}
-
-// Touch variables
-let startY = 0;
-let endY = 0;
-
-navLinks.addEventListener('touchstart', (e) => {
-    startY = e.touches[0].clientY;
-});
-
-navLinks.addEventListener('touchmove', (e) => {
-    endY = e.touches[0].clientY;
-});
-
-navLinks.addEventListener('touchend', () => {
-    // Swipe up detection
-    if (startY - endY > 50) {
-        // User swiped up → close menu
-        navLinks.classList.remove('active');
-    }
-});
-
-// Optional: close menu on scroll (desktop)
-navLinks.addEventListener('wheel', (e) => {
-    if (e.deltaY > 0) { // scroll up
-        navLinks.classList.remove('active');
-    }
-});
-</script>
 </body>
 
 </html>
