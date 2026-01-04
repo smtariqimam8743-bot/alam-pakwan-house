@@ -326,144 +326,144 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
         }
-/* ===== CONTACT CARD ===== */
-.contact-card {
-    max-width: 500px;
-    margin: 30px auto;
-    padding: 25px 20px;
-    background: #111;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
-    text-align: center;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
 
-.contact-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.85);
-}
+        /* ===== CONTACT CARD ===== */
+        .contact-card {
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 25px 20px;
+            background: #111;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+            text-align: center;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
 
-/* ===== HEADER ===== */
-.contact-card .contact-header span {
-    color: #ff8c00;
-    font-size: 14px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-}
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85);
+        }
 
-.contact-card .contact-header h2 {
-    color: #fff;
-    font-size: 26px;
-    margin: 10px 0;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
+        /* ===== HEADER ===== */
+        .contact-card .contact-header span {
+            color: #ff8c00;
+            font-size: 14px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
 
-.contact-card:hover .contact-header h2 {
-    color: #25D366;
-    transform: scale(1.05);
-}
+        .contact-card .contact-header h2 {
+            color: #fff;
+            font-size: 26px;
+            margin: 10px 0;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
 
-.contact-card .contact-line {
-    width: 80px;
-    height: 4px;
-    background: #ff8c00;
-    margin: 10px auto 0;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
+        .contact-card:hover .contact-header h2 {
+            color: #25D366;
+            transform: scale(1.05);
+        }
 
-.contact-card:hover .contact-line {
-    width: 120px;
-    background: linear-gradient(90deg, #ff8c00, #25D366);
-}
+        .contact-card .contact-line {
+            width: 80px;
+            height: 4px;
+            background: #ff8c00;
+            margin: 10px auto 0;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
 
-/* ===== CONTACT BUTTONS ===== */
-.contact-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 25px;
-    flex-wrap: wrap;
-    z-index: 10;
-}
+        .contact-card:hover .contact-line {
+            width: 120px;
+            background: linear-gradient(90deg, #ff8c00, #25D366);
+        }
 
-.contact-buttons .btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 12px 25px;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 12px;
-    text-decoration: none;
-    color: #fff;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-    min-width: 140px;
-}
+        /* ===== CONTACT BUTTONS ===== */
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+            z-index: 10;
+        }
 
-/* WhatsApp Button (Green) */
-.contact-buttons .whatsapp-btn {
-    background: #25D366;
-}
+        .contact-buttons .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            min-width: 140px;
+        }
 
-.contact-buttons .whatsapp-btn:hover {
-    background: #2ee071;
-    transform: scale(1.05);
-    box-shadow: 0 6px 18px rgba(37,211,102,0.5);
-}
+        /* WhatsApp Button (Green) */
+        .contact-buttons .whatsapp-btn {
+            background: #25D366;
+        }
 
-/* Call Button (Orange) */
-.contact-buttons .call-btn {
-    background: #ff8c00;
-}
+        .contact-buttons .whatsapp-btn:hover {
+            background: #2ee071;
+            transform: scale(1.05);
+            box-shadow: 0 6px 18px rgba(37, 211, 102, 0.5);
+        }
 
-.contact-buttons .call-btn:hover {
-    background: #ffa733;
-    transform: scale(1.05);
-    box-shadow: 0 6px 18px rgba(255,140,0,0.5);
-}
+        /* Call Button (Orange) */
+        .contact-buttons .call-btn {
+            background: #ff8c00;
+        }
 
-/* ===== MOBILE RESPONSIVE ===== */
+        .contact-buttons .call-btn:hover {
+            background: #ffa733;
+            transform: scale(1.05);
+            box-shadow: 0 6px 18px rgba(255, 140, 0, 0.5);
+        }
+
+        /* ===== MOBILE RESPONSIVE ===== */
+        /* ===== MOBILE RESPONSIVE ===== */
+/* ===== MOBILE RESPONSIVE FINAL FIX ===== */
 @media(max-width: 480px) {
-    .contact-card {
-        padding: 12px 10px;
-        margin: 15px;
-    }
-
-    .contact-card .contact-header h2 {
-        font-size: 18px;
-        margin: 5px 0;
-    }
-
-    .contact-card .contact-line {
-        width: 40px;
-        height: 3px;
-    }
-
     .contact-buttons {
-        flex-direction: row; /* horizontal */
-        justify-content: center; /* center align */
-        gap: 8px; /* gap between buttons */
-        flex-wrap: wrap; /* wrap if really small screen */
+        display: flex !important;
+        flex-direction: row !important; /* Ek line mein lane ke liye */
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 8px !important;           /* Beech ka gap */
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 20px 0 0 0 !important;
+        padding: 0 !important;
+        transform: none !important;    /* Kisi bhi qism ka offset khatam karne ke liye */
     }
 
     .contact-buttons .btn {
-        width: auto; /* auto width for horizontal layout */
-        padding: 6px 12px; /* smaller padding */
-        font-size: 13px;
-        text-align: center;
-        min-width: 0;
+        position: static !important;   /* Relative/Absolute ko khatam karne ke liye */
+        transform: none !important;    /* Left side par jane se rokne ke liye */
+        flex: 1 !important;            /* Dono ko barabar jagah dene ke liye */
+        min-width: 0 !important;       /* Button ko screen ke andar rakhne ke liye */
+        max-width: 150px !important;   /* Zyada bada na ho */
+        padding: 12px 5px !important;
+        font-size: 13px !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        border-radius: 8px !important;
+        margin: 0 !important;
+        text-decoration: none !important;
+        box-sizing: border-box !important;
     }
 
     .contact-buttons .btn i {
-        font-size: 14px; /* icon size */
+        margin-right: 5px !important;
     }
 }
-
-
-
         /* INFO BOX */
         .contact-info {
             background: #111;
@@ -823,87 +823,87 @@
         }
 
         /* ===== STYLISH MAP CARD ===== */
- /* ===== CLEAN DARK MAP CARD ===== */
-.map {
-    width: 100%;
-    position: relative;
-    border-radius: 16px;
-    overflow: hidden;
-    background: #000;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.75);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
+        /* ===== CLEAN DARK MAP CARD ===== */
+        .map {
+            width: 100%;
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            background: #000;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.75);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
 
-/* ❌ SHINE COMPLETELY REMOVED */
-.map::before {
-    display: none;
-}
+        /* ❌ SHINE COMPLETELY REMOVED */
+        .map::before {
+            display: none;
+        }
 
-/* 🔹 SIMPLE BORDER (NO GLOW) */
-.map::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 16px;
-    border: 1px solid rgba(255,255,255,0.08);
-    pointer-events: none;
-}
+        /* 🔹 SIMPLE BORDER (NO GLOW) */
+        .map::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            pointer-events: none;
+        }
 
-/* 🔹 MAP IFRAME (DARK LOOK) */
-.map iframe {
-    width: 100%;
-    height: 350px;
-    display: block;
-    filter: grayscale(60%) brightness(0.8);
-    transition: transform 0.4s ease;
-}
+        /* 🔹 MAP IFRAME (DARK LOOK) */
+        .map iframe {
+            width: 100%;
+            height: 350px;
+            display: block;
+            filter: grayscale(60%) brightness(0.8);
+            transition: transform 0.4s ease;
+        }
 
-/* 📍 LOCATION PIN (SOFT) */
-.map .map-pin {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 36px;
-    height: 36px;
-    background: #ff8c00;
-    border-radius: 50% 50% 50% 0;
-    transform: translate(-50%, -100%) rotate(-45deg);
-    box-shadow: 0 0 8px rgba(255,140,0,0.5);
-    z-index: 5;
-}
+        /* 📍 LOCATION PIN (SOFT) */
+        .map .map-pin {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 36px;
+            height: 36px;
+            background: #ff8c00;
+            border-radius: 50% 50% 50% 0;
+            transform: translate(-50%, -100%) rotate(-45deg);
+            box-shadow: 0 0 8px rgba(255, 140, 0, 0.5);
+            z-index: 5;
+        }
 
-.map .map-pin::after {
-    content: "";
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    background: #fff;
-    border-radius: 50%;
-    top: 11px;
-    left: 11px;
-}
+        .map .map-pin::after {
+            content: "";
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            background: #fff;
+            border-radius: 50%;
+            top: 11px;
+            left: 11px;
+        }
 
-/* 🔥 VERY SOFT HOVER (NO LIGHT) */
-.location-card:hover .map {
-    transform: translateY(-4px);
-    box-shadow: 0 16px 40px rgba(0,0,0,0.85);
-}
+        /* 🔥 VERY SOFT HOVER (NO LIGHT) */
+        .location-card:hover .map {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.85);
+        }
 
-.location-card:hover .map iframe {
-    transform: scale(1.02);
-}
+        .location-card:hover .map iframe {
+            transform: scale(1.02);
+        }
 
-/* 📱 MOBILE */
-@media (max-width: 768px) {
-    .map iframe {
-        height: 270px;
-    }
+        /* 📱 MOBILE */
+        @media (max-width: 768px) {
+            .map iframe {
+                height: 270px;
+            }
 
-    .map .map-pin {
-        width: 30px;
-        height: 30px;
-    }
-}
+            .map .map-pin {
+                width: 30px;
+                height: 30px;
+            }
+        }
 
 
 
@@ -1064,31 +1064,31 @@
         </a>
 
     </nav>
-     
 
-   
- <div class="contact-card">
 
-    <!-- Heading -->
-    <div class="contact-header">
-        <span>Contact Us</span>
-        <h2>Get in Touch</h2>
-        <div class="contact-line"></div>
+
+    <div class="contact-card">
+
+        <!-- Heading -->
+        <div class="contact-header">
+            <span>Contact Us</span>
+            <h2>Get in Touch</h2>
+            <div class="contact-line"></div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="contact-buttons">
+            <a href="https://wa.me/92332202279" target="_blank" class="btn whatsapp-btn">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="tel:03332202279" class="btn call-btn">
+                <i class="fa fa-phone"></i> Call
+            </a>
+        </div>
+
     </div>
 
-    <!-- Buttons -->
-    <div class="contact-buttons">
-        <a href="https://wa.me/92332202279" target="_blank" class="btn whatsapp-btn">
-            <i class="fa-brands fa-whatsapp"></i> WhatsApp
-        </a>
-        <a href="tel:03332202279" class="btn call-btn">
-            <i class="fa fa-phone"></i> Call
-        </a>
-    </div>
-
-</div>
-
-</div> <!-- Card Container End -->
+    </div> <!-- Card Container End -->
 
     <!-- CONTACT -->
     <section class="contact-section">
@@ -1131,7 +1131,7 @@
 
 
     </section>
-     
+
 
 
     <!-- LOCATION CARD -->
@@ -1147,7 +1147,7 @@
         <!-- MAP -->
         <div class="map" data-aos="zoom-in">
 
-            
+
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.633216538865!2d67.19827201500069!3d24.89904947914847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb3370003b853b7%3A0xa81f931532decb2f!2z2YXYudmE2KfZhNin2YXYs9mF2YrYsdin2KjZhtin2Kcg2YXYp9mE2KfYqiDZhNiq2KfZhNiq2YbYp9mE2YrYqQ!5e0!3m2!1sen!2s!4v1703563200000!5m2!1sen!2s"
                 width="100%" height="350" style="border:0;" allowfullscreen loading="lazy">
